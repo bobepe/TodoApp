@@ -17,7 +17,19 @@
         <meta name="msapplication-TileColor" content="#ffffff">
     </head>
     <body>
-        <p>test</p>
+        <div class="container">
+            <div class="header">
+                <h1>Todo list</h1>
+                <div>
+                    <input id="input-txt" type="text" placeholder="Zadej text">
+                    <button onclick="addItem()">Přidat</button>
+                </div>
+            </div>
+            <div class="main">
+                <ul id="list-id" class="list">
+                </ul>
+            </div>
+        </div>
         <script src="src/index.js"></script>
     </body>
 </html>
