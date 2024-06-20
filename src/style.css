@@ -1,6 +1,10 @@
+* {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     background: #fff;
-    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,4 +15,68 @@ body {
 body p {
     padding: 0;
     margin: 0;
+}
+
+.container {
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* list */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 0 0 1.5rem;
+    margin: 1rem 0 0 0;
+}
+
+.list_item {
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_item::before {
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: absolute;
+
+    border: 1px solid black;
+    left: -1.5rem;
+}
+
+.list_item--checked {
+    text-decoration: line-through;
+}
+
+.list_item--checked::before {
+    border-color: #f18989;
+    background-color: #f18989;
+    content: '\2713';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_item div {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.list_item div:hover {
+    background-color: #edeef0;
 }
