@@ -24,6 +24,15 @@ function addItem() {
   }
 
   input.value = "";
+  saveData();
+}
+
+function saveData() {
+  localStorage.setItem("data", list.innerHTML);
+}
+
+function loadData() {
+  list.innerHTML = localStorage.getItem("data");
 }
 
 list.addEventListener("click", function(e) {
@@ -32,4 +41,7 @@ list.addEventListener("click", function(e) {
   } else if (e.target.tagName === "DIV") {
     e.target.parentElement.remove();
   }
+  saveData();
 }, false);
+
+loadData();

@@ -55,9 +55,17 @@ h1 {
     left: -1.5rem;
 }
 
+.list_item--checked {
+    text-decoration: line-through;
+}
+
 .list_item--checked::before {
-    border-color: red;
-    background-color: red;
+    border-color: #f18989;
+    background-color: #f18989;
+    content: '\2713';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list_item div {
