@@ -1,7 +1,7 @@
 {
   "name": "Todo list App",
   "short_name": "TodoApp",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "icons": [
       {
         "src": "images/check192-192.png",
@@ -18,5 +18,5 @@
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "white",
-    "theme_color": "white"
+    "theme_color": "#03396C"
   }
