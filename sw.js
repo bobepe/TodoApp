@@ -1,4 +1,4 @@
-var cacheName = 'hello-pwa';
+var cacheName = 'hello-pwa-v1.0.0';
 var filesToCache = [
   './',
   './index.html',
@@ -13,6 +13,20 @@ self.addEventListener('install', function(e) {
       return cache.addAll(filesToCache);
     })
   );
+});
+
+/* Aktivace nového service workera a vymazání staré cache */
+self.addEventListener('activate', function(e) {
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
 });
 
 /* Zobrazeni kesovaneho obsahu v offline modu */
