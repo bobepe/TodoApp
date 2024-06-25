@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #fff;
+    background-color: #03396C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,11 +18,39 @@ body p {
 }
 
 .container {
-    padding: 1rem;
+    padding: 2rem;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 1rem;
 }
 
 h1 {
     font-size: 2rem;
+}
+
+.header {
+    margin-bottom: 3rem;
+}
+
+.header > div {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.header > div > input {
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    outline: 0;
+    border: 0.1rem solid;
+}
+
+.header > div > button {
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+    background-color: #f18989;
+    border: 1px solid #f18989;
+    border-radius: 25%;
 }
 
 /* list */
@@ -42,13 +70,14 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.25rem;
 }
 
 .list_item::before {
     content: '';
     height: 1rem;
     width: 1rem;
-    border-radius: 50%;
+    border-radius: 25%;
     position: absolute;
 
     border: 1px solid black;
@@ -66,15 +95,17 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
 }
 
 .list_item div {
     width: 1.5rem;
     height: 1.5rem;
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
     align-items: center;
     border-radius: 100%;
+    font-size: 1.25rem;
 }
 
 .list_item div:hover {
